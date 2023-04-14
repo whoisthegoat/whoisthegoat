@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content=" يعم ده في الشارع بدل ما اوريهولك / this website is for comparing footballers like Messi and Cristiano and Others..">    
+  <meta name="keywords" content="messi , cr7 , cristiano , mo salah , salah , world cup , champions league , lionel andress messi , laliga , premier league , barca , real madrid , liverpool ">
+
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Login Page</title>
+  <link rel = "icon" href = 
+  "images/logo 2.png" 
+          type = "image/xx-icon">
+</head>
+<body>
+    
+    <h3 style="color:black;">Having a problem?</h3> 
+    <br>
+    
+    <a  style="color:red;" href="Get In touch.html">Get In Touch</a> 
+    <br>
+  
+    
+<br><br>
+   
+    
+    </h3>
+  <div class="login-wrapper">
+ 
+    <form action="" class="form">
+      <img src="images/avatar.png" alt="">
+      <h2>Login </h2>
+      <div class="input-group">
+        <input type="text" name="loginUser" id="email" required>
+        <label for="loginUser">User Name</label>
+      </div>
+      <div class="input-group">
+        <input type="password" name="loginPassword" id="password" required>
+       <label for="loginPassword">Password</label>
+      </div>
+      <input type="checkbox" value="lsRememberMe" id="rememberMe"> <label for="rememberMe">Remember me</label>
+     
+   
+  <input type="button" value="login" class="submit-btn" onclick="auth()" onclick="lsRememberMe()" >
+  
+    </form>
+    <style>
+      body{
+        background-image: url(images/bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+
+
+      }
+
+
+</style>
+        
+        
+     <script>
+const rmCheck = document.getElementById("rememberMe"),
+    emailInput = document.getElementById("email");
+
+if (localStorage.checkbox && localStorage.checkbox !== "") {
+  rmCheck.setAttribute("checked", "checked");
+  emailInput.value = localStorage.username;
+} else {
+  rmCheck.removeAttribute("checked");
+  emailInput.value = "";
+}
+
+function lsRememberMe() {
+  if (rmCheck.checked && emailInput.value !== "") {
+    localStorage.username = emailInput.value;
+    localStorage.checkbox = rmCheck.value;
+  } else {
+    localStorage.username = "";
+    localStorage.checkbox = "";
+  }
+}
+      
+     </script>
+  
+  
+  
+  
+  <script>
+function auth(){
+
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+    if (email== "Aboali@gmail.com" && password=="abo ali on top")
+    
+    {
+window.location.assign("Home Page.html");
+alert("خش يا باشا");
+
+    }
+else{
+    alert("ابراهيم ارحمني");
+    return;
+}
+}
+
+
+        </script>
+       
+    
+      </form>
+      
+    </div>
+  </div>
+  
+
+</body>
+</html>
